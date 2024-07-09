@@ -17,10 +17,12 @@ app.post('/user', (req, res) => {
 app.get('/detailByFetch', async (req, res) => {
     try {
         await fetch('https://api.restful-api.dev/objects')
-            .then((product) => {
+        // .then((product) => {
 
-                var data = product.json()
-                return data
+        //     var data = product.json()
+        //     return data
+            .then((data) => {
+                return data.json()
             })
             .then((product) => {
                 var data = product
@@ -74,6 +76,8 @@ app.get('/xmlDetail', (req, res) => {
         console.log(JSON.parse(xmlObj.responseText));
     }
 })
+
+
 
 app.listen(port, (err) => {
     console.log(`listening to port ${port}`);
