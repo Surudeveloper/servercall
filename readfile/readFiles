@@ -1,0 +1,11 @@
+var fs = require("fs");
+var express = require("express");
+var app = express();
+var port = 8090
+
+
+app.get('/', (req, res) => {
+    const stream = fs.createReadStream('./test', 'utf-8');
+    stream.on('data', (chunck) => { res.write(chunck) })
+    stream.on('end', () => { res.end() })
+})

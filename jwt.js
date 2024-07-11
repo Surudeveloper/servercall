@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken')
-const secret='sureshjwtsecret'
+const secret='SureshJwtSecret'
 
 function setUser(user){
     return jwt.sign(user, secret)
