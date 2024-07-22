@@ -11,11 +11,11 @@ module.exports = mongoose.model('user', userSchema)
 
 
 
-var productSchema= mongoose.Schema({
-    name:{type:string},
-    roll:{type:string},
-    phone:{type:string},
-    email:{type:string},
-},{collection: 'product'})
+var productSchema = mongoose.Schema({
+    name: { type: string },
+    roll: { type: string },
+    phone: { type: string },
+    email: { type: string },
+}, { collection: 'product' })
 
-module.exports = mongoose.model('product',productSchema)
+module.exports = mongoose.model('product', productSchema)
