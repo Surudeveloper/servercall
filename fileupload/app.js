@@ -21,7 +21,7 @@ app.post('/upload', (req, res) => {
     console.log(req.files);
     console.log(req.body);
     const image = req.files.upldFile
-    const name = req.body.upldFileName
+    const name = req.body.upldFileName 
 
     image.mv(`${__dirname}/public/images/${image.name}`, (err, data) => {
         if (err) throw err;
